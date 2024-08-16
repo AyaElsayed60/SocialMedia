@@ -1,0 +1,260 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.App {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f7ff;
+  color: #1e202a;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  background-color: #1e202a;
+  color: #f5f7ff;
+}
+
+header {
+  text-align: center;
+  margin: 40px 0;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #63687d;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.toggle-container span {
+  margin-right: 10px;
+}
+
+.toggle-container input[type='checkbox'] {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  background: #ccc;
+  outline: none;
+  border-radius: 50px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-left: auto;
+}
+
+.toggle-container input[type='checkbox']:checked {
+  background: #22c1c3;
+}
+
+.toggle-container input[type='checkbox']:before {
+  content: '';
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background: #fff;
+  border-radius: 50%;
+  top: 1px;
+  right: 1px;
+  transition: 0.3s;
+}
+
+.toggle-container input[type='checkbox']:checked:before {
+  left: 24px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Cards Styles */
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.card {
+  background-color: #f0f3fa;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 240px;
+  margin: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card-top img {
+  margin-right: 10px;
+}
+
+.card h2 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.card p {
+  margin: 5px 0;
+  color: #63687d;
+}
+
+.card .change {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .change.positive {
+  color: #1db489;
+}
+
+.card .change.negative {
+  color: #dc414c;
+}
+
+/* Overview Section Styles */
+.overview {
+  margin: 50px 0;
+}
+
+.overview h2 {
+  font-size: 24px;
+  color: #63687d;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.overview-card {
+  background-color: #f0f3fa;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.overview-card .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.overview-card .card-header p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.overview-card .card-header img {
+  width: 20px;
+  height: 20px;
+}
+
+.overview-card .card-content h3 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.overview-card .card-content p {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overview-card .card-content .positive {
+  color: #1db489;
+}
+
+.overview-card .card-content .negative {
+  color: #dc414c;
+}
+
+/* Dark Mode Specific Styles */
+.dark-mode .card,
+.dark-mode .overview-card {
+  background-color: #252b42;
+  color: #f5f7ff;
+}
+
+.dark-mode .overview h2 {
+  color: #8b97c6;
+}
+
+.dark-mode .toggle-container input[type='checkbox'] {
+  background: #63687d;
+}
+
+.dark-mode .toggle-container input[type='checkbox']:checked {
+  background: #22c1c3;
+}
+
+.DarkMode{
+color: gray;
+font-weight: bold;
+}
+
+.toggle-switch {
+  cursor: pointer;
+  margin: 10px;
+}
+
+.toggle-bar {
+  width: 50px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 30px;
+  position: relative;
+  float: right;
+  transition: background-color 0.3s;
+}
+
+.toggle-bar.active {
+  background-color: #4caf50;
+}
+
+.toggle-circle {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+.toggle-bar.active .toggle-circle {
+  transform: translateX(26px);
+}
